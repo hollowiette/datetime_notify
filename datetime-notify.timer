@@ -1,0 +1,11 @@
+[Unit]
+Description=Таймер для запуска уведомлений текущих даты и времени
+Requires=datetime-notify.service
+
+[Timer]
+Unit=datetime-notify.service
+OnCalendar=*-*-* *:*:00
+AccuracySec=1us
+
+[Install]
+WantedBy=timers.target                          

@@ -1,0 +1,10 @@
+[Unit]
+Description=Сервис уведомлений текущих даты и времени
+Wants=datetime-notify.timer
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/datetime-notify.py
+
+[Install]
+WantedBy=multi-user.target                          
